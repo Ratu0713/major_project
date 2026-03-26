@@ -1,0 +1,83 @@
+<% layout("layouts/boilerplate") %>
+<div class="row">
+<div class="col-8 offset-2">
+  <br><br>
+    <h2>Create a New Listings</h2>
+
+    <form action="/listings" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+
+    <div class="mb-3">
+      <label class="form-label">Title</label>
+      <input type="text" name="listing[title]" class="form-control" required/>
+      <div class="invalid-feedback"> Enter valid Title</div>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <textarea
+        name="listing[description]"
+        placeholder="Description of the place"  
+        cols="40"
+        rows="5"  
+        class="form-control"
+        required
+      ></textarea>   
+      <div class="invalid-feedback">Please enter little description</div>
+      <div class="valid-feedback">nice!</div>
+    </div>  
+
+    <div class="mb-3">
+      <input
+        type="file"
+        name="listing[image]"
+        class="form-control"
+      />
+
+      
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Price</label>
+      <input
+        
+        name="listing[price]"
+        class="form-control" 
+        placeholder="Enter price in Rs"
+        required
+      />
+      <div class="invalid-feedback"> Enter valid Price</div>
+    </div>
+    <div class="row">
+    <div class="col-md-4 mb-3">
+      <label class="form-label">Location</label>
+      <input
+        type="text"
+        name="listing[location]"
+        placeholder="Enter location" 
+        class="form-control"
+        required
+      />
+      <div class="invalid-feedback">please enter your location</div>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+
+    <div class="col-md-8 mb-3">
+      <label class="form-label">Country</label>
+      <input
+        type="text"
+        name="listing[country]"
+        placeholder="Enter country" 
+        class="form-control"
+        required
+      />
+      <div class="invalid-feedback">Please enter valid Country name</div>
+      <div class="valid-feedback">Looks good!</div>
+    </div >
+    </div>
+    <br>
+    <button class="btn btn-dark add-btn">Add</button>
+    </form> <br>
+  </div>
+</div>
+
